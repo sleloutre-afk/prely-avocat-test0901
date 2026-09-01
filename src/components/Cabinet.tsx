@@ -4,8 +4,10 @@ export default function Cabinet() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid-2col" style={{ gap: '5rem', alignItems: 'flex-start' }}>
 
-          {/* Photo */}
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
+          {/* Colonne gauche : photo + formation + expérience */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+
+            {/* Photo */}
             <div style={{ position: 'relative', width: '100%', maxWidth: '300px' }}>
               <div style={{
                 position: 'absolute', top: '-14px', left: '-14px', zIndex: 0,
@@ -32,6 +34,57 @@ export default function Cabinet() {
                 Serment 2020
               </div>
             </div>
+
+            {/* Formation */}
+            <div style={{ borderTop: '1px solid rgba(28,43,58,0.10)', paddingTop: '2rem' }}>
+              <div style={{ fontSize: '0.56rem', letterSpacing: '0.22em', color: '#2e6a8a', textTransform: 'uppercase', marginBottom: '1.2rem' }}>
+                Formation
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem' }}>
+                {[
+                  { date: '2012–2015', titre: "Licence Histoire de l'Art", lieu: 'Université Paris-Sorbonne' },
+                  { date: '2015–2016', titre: 'Master I Droit privé général', lieu: 'Paris II Panthéon-Assas' },
+                  { date: '2016–2017', titre: 'Master II DPLA', lieu: 'Paris II Panthéon-Assas · Pr P.-Y. Gautier' },
+                  { date: '2019–2020', titre: 'EFB — Promo Jacques Toubon', lieu: 'Droit des Affaires · Propriété Intellectuelle' },
+                  { date: 'Juin 2020', titre: 'Serment', lieu: 'Barreau de Paris' },
+                  { date: '2022', titre: 'Transfert', lieu: 'Barreau de Bordeaux' },
+                ].map((f, i) => (
+                  <div key={i} style={{ display: 'flex', gap: '1rem' }}>
+                    <span style={{ fontSize: '0.60rem', color: '#2e6a8a', letterSpacing: '0.06em', minWidth: '58px', paddingTop: '1px', flexShrink: 0 }}>{f.date}</span>
+                    <div>
+                      <div style={{ fontSize: '0.78rem', color: '#1c2b3a', lineHeight: 1.3 }}>{f.titre}</div>
+                      <div style={{ fontSize: '0.65rem', color: 'rgba(28,43,58,0.45)', lineHeight: 1.4 }}>{f.lieu}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Expérience */}
+            <div style={{ borderTop: '1px solid rgba(28,43,58,0.10)', paddingTop: '2rem' }}>
+              <div style={{ fontSize: '0.56rem', letterSpacing: '0.22em', color: '#2e6a8a', textTransform: 'uppercase', marginBottom: '1.2rem' }}>
+                Expérience professionnelle
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem' }}>
+                {[
+                  { date: '2019', titre: 'Direction juridique', lieu: "L'Oréal · Groupe Renault" },
+                  { date: '2020', titre: 'Élève-avocat IP-IT', lieu: 'Gide Loyrette Nouel' },
+                  { date: '2020–2022', titre: 'Avocat', lieu: "Franklin société d'avocats · Paris" },
+                  { date: '2022–2024', titre: 'Avocat', lieu: 'EY Société d\'Avocats · Bordeaux' },
+                  { date: '2023 –', titre: 'Expert Commercial-IP-Data', lieu: 'Incubateur HEC Paris (pro bono)' },
+                  { date: '2024 –', titre: 'Avocat collaborateur', lieu: 'Lexymore · Bordeaux' },
+                ].map((e, i) => (
+                  <div key={i} style={{ display: 'flex', gap: '1rem' }}>
+                    <span style={{ fontSize: '0.60rem', color: '#2e6a8a', letterSpacing: '0.06em', minWidth: '58px', paddingTop: '1px', flexShrink: 0 }}>{e.date}</span>
+                    <div>
+                      <div style={{ fontSize: '0.78rem', color: '#1c2b3a', lineHeight: 1.3 }}>{e.titre}</div>
+                      <div style={{ fontSize: '0.65rem', color: 'rgba(28,43,58,0.45)', lineHeight: 1.4 }}>{e.lieu}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
 
           {/* Bio */}
@@ -67,7 +120,7 @@ export default function Cabinet() {
               Bilingue français-anglais, il accompagne également des clients internationaux dans la protection de leurs actifs intellectuels et leur développement sur le marché français.
             </p>
 
-            <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
+            <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap' }}>
               {['Propriété intellectuelle', 'Droit du numérique', 'Droit des sociétés', 'Bilingue FR/EN'].map(d => (
                 <span key={d} style={{
                   fontSize: '0.60rem', letterSpacing: '0.14em', textTransform: 'uppercase',
@@ -80,63 +133,6 @@ export default function Cabinet() {
                 border: '1px solid rgba(46,106,138,0.40)', color: '#2e6a8a',
                 padding: '0.35rem 0.85rem',
               }}>Best Lawyers 2023</span>
-            </div>
-
-            {/* Formation & Expérience */}
-            <div style={{ borderTop: '1px solid rgba(28,43,58,0.10)', paddingTop: '2.5rem' }}>
-              <div className="grid-2col" style={{ gap: '2.5rem' }}>
-
-                {/* Formation */}
-                <div>
-                  <div style={{ fontSize: '0.56rem', letterSpacing: '0.22em', color: '#2e6a8a', textTransform: 'uppercase', marginBottom: '1.2rem' }}>
-                    Formation
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem' }}>
-                    {[
-                      { date: '2012–2015', titre: 'Licence Histoire de l\'Art', lieu: 'Université Paris-Sorbonne' },
-                      { date: '2015–2016', titre: 'Master I Droit privé général', lieu: 'Paris II Panthéon-Assas' },
-                      { date: '2016–2017', titre: 'Master II DPLA', lieu: 'Paris II Panthéon-Assas · Pr P.-Y. Gautier' },
-                      { date: '2019–2020', titre: 'EFB — Promo Jacques Toubon', lieu: 'Droit des Affaires · Propriété Intellectuelle' },
-                      { date: 'Juin 2020', titre: 'Serment', lieu: 'Barreau de Paris' },
-                      { date: '2022', titre: 'Transfert', lieu: 'Barreau de Bordeaux' },
-                    ].map((f, i) => (
-                      <div key={i} style={{ display: 'flex', gap: '1rem' }}>
-                        <span style={{ fontSize: '0.60rem', color: '#2e6a8a', letterSpacing: '0.06em', minWidth: '58px', paddingTop: '1px' }}>{f.date}</span>
-                        <div>
-                          <div style={{ fontSize: '0.78rem', color: '#1c2b3a', lineHeight: 1.3 }}>{f.titre}</div>
-                          <div style={{ fontSize: '0.65rem', color: 'rgba(28,43,58,0.45)', lineHeight: 1.4 }}>{f.lieu}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Expérience */}
-                <div>
-                  <div style={{ fontSize: '0.56rem', letterSpacing: '0.22em', color: '#2e6a8a', textTransform: 'uppercase', marginBottom: '1.2rem' }}>
-                    Expérience professionnelle
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem' }}>
-                    {[
-                      { date: '2019', titre: 'Direction juridique', lieu: 'L\'Oréal · Groupe Renault' },
-                      { date: '2020', titre: 'Élève-avocat IP-IT', lieu: 'Gide Loyrette Nouel' },
-                      { date: '2020–2022', titre: 'Avocat', lieu: 'Franklin société d\'avocats · Paris' },
-                      { date: '2022–2024', titre: 'Avocat', lieu: 'EY Société d\'Avocats · Bordeaux' },
-                      { date: '2023 –', titre: 'Expert Commercial-IP-Data', lieu: 'Incubateur HEC Paris (pro bono)' },
-                      { date: '2024 –', titre: 'Avocat collaborateur', lieu: 'Lexymore · Bordeaux' },
-                    ].map((e, i) => (
-                      <div key={i} style={{ display: 'flex', gap: '1rem' }}>
-                        <span style={{ fontSize: '0.60rem', color: '#2e6a8a', letterSpacing: '0.06em', minWidth: '58px', paddingTop: '1px' }}>{e.date}</span>
-                        <div>
-                          <div style={{ fontSize: '0.78rem', color: '#1c2b3a', lineHeight: 1.3 }}>{e.titre}</div>
-                          <div style={{ fontSize: '0.65rem', color: 'rgba(28,43,58,0.45)', lineHeight: 1.4 }}>{e.lieu}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-              </div>
             </div>
 
           </div>
