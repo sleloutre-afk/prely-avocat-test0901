@@ -42,12 +42,12 @@ export default function Cabinet() {
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem' }}>
                 {[
-                  { date: '2012–2015', titre: "Licence Histoire de l'Art", lieu: 'Université Paris-Sorbonne' },
-                  { date: '2015–2016', titre: 'Master I Droit privé général', lieu: 'Paris II Panthéon-Assas' },
-                  { date: '2016–2017', titre: 'Master II DPLA', lieu: 'Paris II Panthéon-Assas · Pr P.-Y. Gautier' },
-                  { date: '2019–2020', titre: 'EFB — Promo Jacques Toubon', lieu: 'Droit des Affaires · Propriété Intellectuelle' },
-                  { date: 'Juin 2020', titre: 'Serment', lieu: 'Barreau de Paris' },
                   { date: '2022', titre: 'Transfert', lieu: 'Barreau de Bordeaux' },
+                  { date: 'Juin 2020', titre: 'Serment', lieu: 'Barreau de Paris' },
+                  { date: '2019–2020', titre: 'EFB — Promo Jacques Toubon', lieu: 'Droit des Affaires · Propriété Intellectuelle' },
+                  { date: '2016–2017', titre: 'Master II DPLA', lieu: 'Paris II Panthéon-Assas · Pr P.-Y. Gautier' },
+                  { date: '2015–2016', titre: 'Master I Droit privé général', lieu: 'Paris II Panthéon-Assas' },
+                  { date: '2012–2015', titre: "Licence Histoire de l'Art", lieu: 'Université Paris-Sorbonne' },
                 ].map((f, i) => (
                   <div key={i} style={{ display: 'flex', gap: '1rem' }}>
                     <span style={{ fontSize: '0.60rem', color: '#2e6a8a', letterSpacing: '0.06em', minWidth: '58px', paddingTop: '1px', flexShrink: 0 }}>{f.date}</span>
@@ -67,12 +67,12 @@ export default function Cabinet() {
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem' }}>
                 {[
-                  { date: '2019', titre: 'Direction juridique', lieu: "L'Oréal · Groupe Renault" },
-                  { date: '2020', titre: 'Élève-avocat IP-IT', lieu: 'Gide Loyrette Nouel' },
-                  { date: '2020–2022', titre: 'Avocat', lieu: "Franklin société d'avocats · Paris" },
-                  { date: '2022–2024', titre: 'Avocat', lieu: 'EY Société d\'Avocats · Bordeaux' },
-                  { date: '2023 –', titre: 'Expert Commercial-IP-Data', lieu: 'Incubateur HEC Paris (pro bono)' },
                   { date: '2024 –', titre: 'Avocat collaborateur', lieu: 'Lexymore · Bordeaux' },
+                  { date: '2023 –', titre: 'Expert Commercial-IP-Data', lieu: 'Incubateur HEC Paris (pro bono)' },
+                  { date: '2022–2024', titre: 'Avocat', lieu: "EY Société d'Avocats · Bordeaux" },
+                  { date: '2020–2022', titre: 'Avocat', lieu: "Franklin société d'avocats · Paris" },
+                  { date: '2020', titre: 'Élève-avocat IP-IT', lieu: 'Gide Loyrette Nouel' },
+                  { date: '2019', titre: 'Direction juridique', lieu: "L'Oréal · Groupe Renault" },
                 ].map((e, i) => (
                   <div key={i} style={{ display: 'flex', gap: '1rem' }}>
                     <span style={{ fontSize: '0.60rem', color: '#2e6a8a', letterSpacing: '0.06em', minWidth: '58px', paddingTop: '1px', flexShrink: 0 }}>{e.date}</span>
