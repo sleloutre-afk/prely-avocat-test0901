@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --color-fonce: #1c2b3a;
+  --color-fonce-dark: #0e1520;
+  --color-accent: #2e6a8a;
+  --color-accent-light: #4a88a8;
+  --color-fond: #f2f4f6;
+  --color-creme: #e5e9ed;
+  --color-muted: #4a6070;
+  --color-divider: #cdd5db;
+}
+
+@keyframes kenburns {
+  0%   { transform: scale(1.0) translate(0, 0); }
+  100% { transform: scale(1.08) translate(-1.5%, 1%); }
+}
+.hero-img {
+  animation: kenburns 20s ease-in-out infinite alternate;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.md\:grid-cols-3 { grid-template-columns: 1fr; }
+.md\:grid-cols-2 { grid-template-columns: 1fr; }
+.grid-2col       { display: grid; grid-template-columns: 1fr; }
+.stats-grid      { display: grid; grid-template-columns: repeat(2, 1fr); }
+.grid-footer     { display: grid; grid-template-columns: 1fr; }
+
+@media (min-width: 768px) {
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-2col       { grid-template-columns: 1fr 1fr; }
+  .stats-grid      { grid-template-columns: repeat(4, 1fr); }
+  .grid-footer     { grid-template-columns: 1.5fr 1fr 1fr; }
+}
+
+.stat-sep { border-right: 1px solid rgba(242,244,246,0.07); }
+@media (max-width: 767px) {
+  .stat-sep { border-right: none; border-bottom: 1px solid rgba(242,244,246,0.07); }
+}
+
+/* Hover effects */
+.hover-card {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+.hover-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(28,43,58,0.10);
+  border-color: rgba(46,106,138,0.35) !important;
+}
+
+.hover-article {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  display: block;
+}
+.hover-article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(28,43,58,0.10);
+}
+
+.hover-btn-primary {
+  transition: opacity 0.18s ease;
+}
+.hover-btn-primary:hover {
+  opacity: 0.82;
+}
+
+.hover-btn-dark {
+  transition: background 0.18s ease;
+}
+.hover-btn-dark:hover {
+  background: #0e1520 !important;
+}
+
+.hover-btn-outline {
+  transition: background 0.18s ease, color 0.18s ease;
+}
+.hover-btn-outline:hover {
+  background: rgba(28,43,58,0.06);
+}
+
+.hover-btn-outline-light {
+  transition: background 0.18s ease;
+}
+.hover-btn-outline-light:hover {
+  background: rgba(242,244,246,0.12);
+}
+
+/* Navbar responsive */
+.nav-desktop { display: none; align-items: center; }
+.nav-burger  { display: flex; }
+@media (min-width: 768px) {
+  .nav-desktop { display: flex; }
+  .nav-burger  { display: none; }
+}
