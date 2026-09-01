@@ -1,9 +1,4 @@
 export default function Honoraires() {
-  const tarifs = [
-    { type: 'Consultation au cabinet ou en visioconférence', duree: '45 min', prix: '150 €' },
-    { type: 'Consultation téléphonique', duree: '30 min', prix: '90 €' },
-  ]
-
   const modes = [
     {
       titre: 'Honoraires au forfait',
@@ -32,25 +27,6 @@ export default function Honoraires() {
           <h2 style={{ fontFamily: 'var(--font-playfair)', fontSize: 'clamp(1.7rem, 3vw, 2.4rem)', fontWeight: 400, color: '#f2f4f6', margin: 0, lineHeight: 1.20 }}>
             Transparence des honoraires
           </h2>
-        </div>
-
-        <div style={{ maxWidth: '560px', margin: '0 auto 4rem', borderTop: '1px solid rgba(242,244,246,0.15)' }}>
-          {tarifs.map((t, i) => (
-            <div key={i} style={{
-              display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-              padding: '1.4rem 0',
-              borderBottom: '1px solid rgba(242,244,246,0.10)',
-              gap: '1rem', flexWrap: 'wrap',
-            }}>
-              <div>
-                <div style={{ fontFamily: 'var(--font-playfair)', fontSize: '0.95rem', color: '#f2f4f6', fontWeight: 400 }}>{t.type}</div>
-                <div style={{ fontSize: '0.62rem', color: 'rgba(242,244,246,0.35)', letterSpacing: '0.10em', textTransform: 'uppercase', marginTop: '0.2rem' }}>{t.duree}</div>
-              </div>
-              <div style={{ fontFamily: 'var(--font-playfair)', fontSize: '1.20rem', color: 'rgba(242,244,246,0.85)', fontWeight: 400, flexShrink: 0 }}>
-                {t.prix} <span style={{ fontSize: '0.62rem', color: 'rgba(242,244,246,0.30)', letterSpacing: '0.06em' }}>TTC</span>
-              </div>
-            </div>
-          ))}
         </div>
 
         <div className="md:grid-cols-3" style={{ display: 'grid', gap: '1.5rem', marginBottom: '3.5rem' }}>
